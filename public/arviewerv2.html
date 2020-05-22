@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <script src="libs/aframe-1.0.4/package/dist/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="libs/aframe-ar.js"></script>
+  <script>
+    window.onload = () => {
+      /* var URLlist = parent.objectURLlist;
+      console.log(URLlist[URLlist.length - 1].url);
+      document
+        .getElementById("3dmodel")
+        .setAttribute("gltf-model", URLlist[URLlist.length - 1].url); */
+    };
+  </script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 0 0"
+          scale="0.005 0.005 0.005"
+          gltf-model="./assets/examples/plane01.gltf"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
