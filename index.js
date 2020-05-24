@@ -2,7 +2,6 @@
 const express = require("express");
 var path = require("path");
 var app = express();
-//var bodyParser = require("body-parser");
 var _3dobject = require("./routes/3dobjects");
 var user = require("./routes/users");
 
@@ -18,5 +17,5 @@ app.get("*", (req, res) => {
 var port = process.env.PORT || 3000;
 
 app.listen(port, () =>
-  console.log("Express server is runnig at port no : 3000")
+  console.log("Express server is runnig at port no : " + port)
 );
